@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Fri May 03 10:12:22 CDT 2019:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.12.1.1 - (1704137): instance a816c00e-016a-7e40-e02b-000019ce9e28 
+on database directory /Users/nehanavgale/Documents/GitHub/TwitterDataAnalysis/Phase-2/tweetsAnalysis/src/assets/Input/metastore_db with class loader sun.misc.Launcher$AppClassLoader@36aa7bc2 
+Loaded from file:/usr/local/Cellar/apache-spark/2.4.0/libexec/jars/derby-10.12.1.1.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_202-b08
+user.dir=/Users/nehanavgale/Documents/GitHub/TwitterDataAnalysis/Phase-2/tweetsAnalysis/src/assets/Input
+os.name=Mac OS X
+os.arch=x86_64
+os.version=10.14.4
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
