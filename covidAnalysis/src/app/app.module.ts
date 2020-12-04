@@ -9,12 +9,16 @@ import { ChartsModule} from 'ng2-charts';
 import { GoogleChartsModule } from 'angular-google-charts';
 import { DeceasedComponent } from './deceased/deceased.component';
 import { USASummaryComponent } from './usasummary/usasummary.component';
+import { CasesByDateComponent } from './cases-by-date/cases-by-date.component';
+import { CasesByStateComponent } from './cases-by-state/cases-by-state.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DeceasedComponent,
-    USASummaryComponent
+    USASummaryComponent,
+    CasesByDateComponent,
+    CasesByStateComponent
   ],
   imports: [
     BrowserModule,

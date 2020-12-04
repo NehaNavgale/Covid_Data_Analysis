@@ -13,7 +13,7 @@ export class USASummaryComponent implements OnInit {
   ngOnInit(): void {
     this.http.get('http://127.0.0.1:5000/api/byUSATotal').subscribe(data => {
       this.covid_data = data;
-      console.log(this.covid_data[0].totalDeath);
+      console.log(this.covid_data[0].total_cases);
     });
   }
 

@@ -15,7 +15,7 @@ am4core.useTheme(am4themes_animated);
   styleUrls: ['./deceased.component.css']
 })
 export class DeceasedComponent implements OnInit {
-  settings = {
+  settingsD = {
     columns: {
       state: {
         title: 'state'
@@ -30,7 +30,23 @@ export class DeceasedComponent implements OnInit {
       edit: false
     }
   };
-  data;
+  settingsC = {
+    columns: {
+      state: {
+        title: 'state'
+      },
+      new_case: {
+        title: 'cases'
+      }
+    },
+    actions: {
+      delete: false,
+      add: false,
+      edit: false
+    }
+  };
+  deathData;
+  casesData;
   // private tweets: any;
   // public filterData: [];
 
@@ -39,9 +55,10 @@ export class DeceasedComponent implements OnInit {
   ngOnInit() {
 
     this.http.get('http://127.0.0.1:5000/api/byDeath').subscribe(data => {
-      this.data = data;
-      /*console.log(data)*/
-      // this.createGraph(data);
+      this.deathData = data;
+    });
+    this.http.get('http://127.0.0.1:5000/api/bySingleDayRise').subscribe(data => {
+      this.casesData = data;
     });
   }
 
