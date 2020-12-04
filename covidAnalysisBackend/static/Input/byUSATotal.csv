@@ -1,2 +1,2 @@
-totalDeath,totalPositive,totalHospitalized,recovered,totalTestResults
-65017.0,1917514.0,248175.0,1065539.0,42595576.0
+total_cases,total_deaths,total_cases_per_million,icu_patients,hosp_patients
+994265.0,99214.0,9960.869,9994.0,98691.0
