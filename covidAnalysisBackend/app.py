@@ -17,6 +17,23 @@ def load_deathData():
   csv_data = pd.read_csv("static/Input/byDeath.csv", sep=',')
   return csv_data
 
+def load_byHospitalizationTotal():
+    csv_data = pd.read_csv("static/Input/byHospitalizationTotal.csv", sep=',')
+    return csv_data
+
+def load_byDateDeaths():
+    csv_data = pd.read_csv("static/Input/byDateDeaths.csv", sep=',')
+    return csv_data
+
+def load_byLargestTestingIncrease():
+    csv_data = pd.read_csv("static/Input/byLargestTestingIncrease.csv", sep=',')
+    return csv_data
+
+
+@app.route('/api/byDeath')
+def byCountry():
+    data = load_deathData()
+
 def load_SingleDayRise():
   csv_data = pd.read_csv("static/Input/bySingleDayRise.csv", sep=',')
   return csv_data
@@ -66,6 +83,21 @@ def byNovCases():
 @app.route('/api/byAge')
 def byAge():
     data = load_ByAge()
+    return data.to_json(orient='records')
+
+@app.route('/api/byHospitalizationTotal')
+def byHospitalizationTotal():
+    data = load_byHospitalizationTotal()
+    return data.to_json(orient='records')
+
+@app.route('/api/byDateDeaths')
+def byDateDeaths():
+    data = load_byDateDeaths()
+    return data.to_json(orient='records')
+
+@app.route('/api/byLargestTestingIncrease')
+def byLargestTestingIncrease():
+    data = load_byLargestTestingIncrease()
     return data.to_json(orient='records')
 
 @app.route('/')

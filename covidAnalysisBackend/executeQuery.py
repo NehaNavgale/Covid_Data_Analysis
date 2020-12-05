@@ -6,6 +6,7 @@ import requests
 import findspark
 findspark.init()
 from pyspark.sql import SparkSession
+
 from pyspark import SparkContext, SparkConf
 from pyspark.sql.functions import to_date
 from pyspark.sql.functions import col
@@ -177,3 +178,21 @@ query7 = spark.sql("select Data_as_of, Age_group, COVID_Deaths from AgeData")
 query7.show()
 pd = query7.toPandas()
 pd.to_csv('static/Input/byAge.csv', index=False)
+
+#Query 7: State with most hospitalizations
+query7 = df.groupBy("state").agg({"hospitalized": "sum"}).withColumnRenamed("sum(hospitalized)", "totalHospitalizations").orderBy("totalHospitalizations", ascending=False)
+query7.show()
+pd = query7.toPandas()
+pd.to_csv('static/Input/byHospitalizationTotal.csv', index=False)
+
+#Query 8: Date with most deaths
+query8 = df.groupBy("date").agg({"death": "sum"}).withColumnRenamed("sum(death)", "totalDeaths").orderBy("totalDeaths", ascending=False)
+query8.show()
+pd = query8.toPandas()
+pd.to_csv('static/Input/byDateDeaths.csv', index=False)
+
+#Query 9: States with largest increase in testing
+query9 = df.groupBy("state").agg({"totalTestResultsIncrease": "max"}).withColumnRenamed("max(totalTestResultsIncrease)", "maxTestIncrease").orderBy("maxTestIncrease", ascending=False)
+query9.show()
+pd = query9.toPandas()
+pd.to_csv('static/Input/byLargestTestingIncrease.csv', index=False)
