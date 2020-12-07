@@ -49,20 +49,5 @@ export class CasesByDateComponent implements OnInit {
     chart.cursor.xAxis = dateAxis;
 
     chart.scrollbarX = new am4core.Scrollbar();
-
-// Create axes
-//     const categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
-//     categoryAxis.dataFields.category = 'Date';
-//
-//     const valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
-//
-// // Create series
-//     const series = chart.series.push(new am4charts.LineSeries());
-//     series.name = 'Units';
-//     series.stroke = am4core.color('#CDA2AB');
-//     series.strokeWidth = 3;
-//     series.dataFields.valueY = 'positive';
-//     series.dataFields.categoryX = 'date';
   }
-
 }

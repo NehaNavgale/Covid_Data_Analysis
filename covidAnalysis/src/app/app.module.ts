@@ -11,6 +11,9 @@ import { DeceasedComponent } from './deceased/deceased.component';
 import { USASummaryComponent } from './usasummary/usasummary.component';
 import { CasesByDateComponent } from './cases-by-date/cases-by-date.component';
 import { CasesByStateComponent } from './cases-by-state/cases-by-state.component';
+import { CovidPolicyComponent } from './covid-policy/covid-policy.component';
+import { HospitalizedDataComponent } from './hospitalized-data/hospitalized-data.component';
+import { TestingDataComponent } from './testing-data/testing-data.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { CasesByStateComponent } from './cases-by-state/cases-by-state.component
     DeceasedComponent,
     USASummaryComponent,
     CasesByDateComponent,
-    CasesByStateComponent
+    CasesByStateComponent,
+    CovidPolicyComponent,
+    HospitalizedDataComponent,
+    TestingDataComponent
   ],
   imports: [
     BrowserModule,

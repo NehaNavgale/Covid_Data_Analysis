@@ -1,41 +1,84 @@
 <div class="container-fluid">
-  <div class="row" style="background: lightgray;width: 100%; height: 8%; text-align: center">
-    <div class="col-md-12" style="text-align: center">
-      <ul class="nav">
-        <li class="nav-item">
+  <div class="row" style="background: lightgray; margin-left:0px; height:40px">
+      <div class="col-md-12" style="text-align: center; padding-top: 8px">
           <h1 style="color: black; font-family: monospace;"><b>Covid-19 Pandemic Data Analysis</b></h1>
-        </li>
-      </ul>
-    </div>
+      </div>
   </div>
   <div class="row" style="padding-top: 20px;">
-    <div class="col-md-10" style="margin-left: 200px;">
+    <div class="col-md-12">
       <div class="row" id="USAData">
         <div class="col-12">
-          <h3 h2 style="text-align: center"><b>USA Covid Data</b></h3>
+          <h3 h2 style="text-align: center"><b>USA Covid Record</b></h3>
           <app-usasummary></app-usasummary>
         </div>
       </div>
-      <div class="row" id="casesByState" style="height:500px;">
-        <div class="col-12">
-          <h3 style="text-align: center"><b>Cases by state</b></h3>
-            <app-cases-by-state></app-cases-by-state>
-        </div>
-      </div>
-<!--      <div class="row" id="deceased">-->
-<!--        <div class="col-12">-->
-<!--          <h3 style="text-align: center"><b>Number of Deaths by state</b></h3>-->
-<!--          <app-deceased></app-deceased>-->
-<!--        </div>-->
-<!--      </div>-->
-      <div class="row" id="casesInKS">
-        <div class="col-12">
-          <h3 style="text-align: center"><b>Number of Cases in Kansas</b></h3>
-          <div style="height: 500px">
-          <app-cases-by-date></app-cases-by-date>
-          </div>
-        </div>
-      </div>
+    </div>
   </div>
+  <div class="row">
+    <div class="col-md-2" style="position: fixed; padding-top: 30px;">
+      <ul>
+        <li class="list-item">
+          <a href="#stateCases">States Data</a>
+        </li>
+        <li class="list-item">
+          <a href="#casesInKS">Kansas covid data</a>
+        </li>
+        <li class="list-item">
+          <a href="#covidPolicy">Covid Policies</a>
+        </li>
+
+        <li class="list-item">
+          <a href="#hosptRecords">Hospitalization Records</a>
+        </li>
+
+        <li class="list-item">
+          <a href="#testingRecords">Testing records</a>
+        </li>
+<!--        <li class="list-item">-->
+<!--          <a href="#devices">Device</a>-->
+<!--        </li>-->
+<!--        <li class="list-item">-->
+<!--          <a href="#avengersmovies">Avengers Movies</a>-->
+<!--        </li>-->
+<!--        <li class="list-item">-->
+<!--          <a href="#beforeafter">Before and after End Game</a>-->
+<!--        </li>-->
+<!--        <li class="list-item">-->
+<!--          <a href="#endGame">Tweets for End Game for countries</a>-->
+<!--        </li>-->
+      </ul>
+    </div>
+    <div class="col-md-10" style="padding-top: 35px; margin-left: 250px;">
+      <div class="row" id="stateCases">
+        <div class="col-md-12">
+          <h3 style="text-align: center"><b>Cases by state</b></h3>
+          <app-cases-by-state></app-cases-by-state>
+        </div>
+      </div>
+      <div class="row" id="hosptRecords">
+        <div class="col-md-12">
+          <h3 style="text-align: center"><b>States with most hostpitalization</b></h3>
+          <app-hospitalized-data></app-hospitalized-data>
+        </div>
+      </div>
+      <div class="row" id="testingRecords">
+        <div class="col-md-12">
+          <h3 style="text-align: center"><b>States with most testing done</b></h3>
+          <app-testing-data></app-testing-data>
+        </div>
+      </div>
+      <div class="row" id="casesInKS">
+        <div class="col-md-12">
+          <h3 style="text-align: center"><b>Number of Cases in Kansas</b></h3>
+          <app-cases-by-date></app-cases-by-date>
+        </div>
+      </div>
+      <div class="row" id="covidPolicy">
+        <div class="col-md-12">
+          <h3 style="text-align: center"><b>Covid policies</b></h3>
+            <app-covid-policy></app-covid-policy>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

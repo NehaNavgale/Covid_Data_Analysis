@@ -1,0 +1,13 @@
+<div id="stateReopenPolicy" style="margin-top: 20px">
+    <h4><b>Reopen policy and stay at Home order</b></h4>
+    <ng2-smart-table [settings]="settings" [source]="policy_data"></ng2-smart-table>
+</div>
+<div id="quarantinePolicy" style="margin-top: 20px">
+  <h4><b>States with mandantory quarantine lifted</b></h4>
+  <ng2-smart-table [settings]="settingsQ" [source]="quarantine_data"></ng2-smart-table>
+</div>
+<div id="barReopenPolicy" style="margin-top: 20px">
+  <h4><b>Bar reopen policy</b></h4>
+  <ng2-smart-table [settings]="settingsB" [source]="barOpen_data"></ng2-smart-table>
+</div>
+

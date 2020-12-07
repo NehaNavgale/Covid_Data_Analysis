@@ -1,2 +1,19 @@
-<div id="casesByState" style="width: 100%; height: 100%">
+<h4 style="margin-top: 20px"><b>Cases rise in USA in the monthe of november</b></h4>
+<div class="row" id="USANovCases" style="height: 500px;">
+</div>
+
+<h4 style="margin-top: 20px"><b>Top 10 states</b></h4>
+<div id="casesByTop10State" style="height: 500px;"></div>
+
+<div id="casesByState" style="height: 500px; margin-top: 20px">
+    <h4><b>Cases and deaths by state</b></h4>
+    <ng2-smart-table [settings]="settings" [source]="covid_data"></ng2-smart-table>
+</div>
+<div id="byDeath" style="height: 500px;">
+    <h4><b>Max single day rise in death record</b></h4>
+    <ng2-smart-table [settings]="settingsD" [source]="death_data"></ng2-smart-table>
+</div>
+<div id="singleDayRise" style="height: 500px;">
+  <h4><b>Max single day rise in cases</b></h4>
+  <ng2-smart-table [settings]="settingsC" [source]="rise_data"></ng2-smart-table>
 </div>

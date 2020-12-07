@@ -1,7 +1,49 @@
-<div id="USASummary" style="width: 100%;">
-  <h4>Total Cases: {{covid_data[0].total_cases}}</h4>
-  <h4>Total Death: {{covid_data[0].total_deaths}}</h4>
-  <h4>Total Cases per million: {{covid_data[0].total_cases_per_million}}</h4>
-  <h4>Total Hospitalized: {{covid_data[0].hosp_patients}}</h4>
-  <h4>Total ICU Patients: {{covid_data[0].icu_patients}}</h4>
+<div id="USASummary" style="width: 100%; text-align: center">
+  <div class="row">
+    <div class="col-3"></div>
+        <div class="col-3">
+          <h3 style="color: red">Total Cases</h3>
+        </div>
+        <div class="col-3">
+          <h3 style="color: darkgray">Total Death</h3>
+        </div>
+    <div class="col-3"></div>
+  </div>
+  <div class="row">
+    <div class="col-3"></div>
+        <div class="col-3">
+          <h4 style="color: red">{{covid_data[0].total_cases}}</h4>
+        </div>
+        <div class="col-3">
+          <h4 style="color: darkgray">{{covid_data[0].total_deaths}}</h4>
+        </div>
+    <div class="col-3"></div>
+  </div>
+  <div class="row" style="padding-top: 20px;">
+    <div class="col-2"></div>
+        <div class="col-3">
+          <h3 style="color: yellowgreen">Total Cases per million</h3>
+        </div>
+        <div class="col-2">
+          <h3 style="color: dodgerblue">Total Hospitalized</h3>
+        </div>
+       <div class="col-3">
+         <h3 style="color: brown">Total ICU Patients</h3>
+       </div>
+    <div class="col-2"></div>
+  </div>
+  <div class="row">
+    <div class="col-2"></div>
+        <div class="col-3">
+          <h4 style="color: yellowgreen">{{covid_data[0].total_cases_per_million}}</h4>
+        </div>
+        <div class="col-2">
+          <h4 style="color: dodgerblue">{{covid_data[0].hosp_patients}}</h4>
+        </div>
+        <div class="col-3">
+          <h4 style="color: brown">{{covid_data[0].icu_patients}}</h4>
+        </div>
+    <div class="col-2"></div>
+  </div>
 </div>
+
