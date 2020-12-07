@@ -139,6 +139,24 @@ query10.show()
 pd = query10.toPandas()
 pd.to_csv('static/Input/byPolicyOfBarReopen.csv', index=False)
 
+#Query 11: State with most hospitalizations
+query11 = df.groupBy("state").agg({"hospitalized": "sum"}).withColumnRenamed("sum(hospitalized)", "totalHospitalizations").orderBy("totalHospitalizations", ascending=False)
+query11.show()
+pd = query11.toPandas()
+pd.to_csv('static/Input/byHospitalizationTotal.csv', index=False)
+
+#Query 12: Date with most deaths
+query12 = df.groupBy("date").agg({"death": "sum"}).withColumnRenamed("sum(death)", "totalDeaths").orderBy("totalDeaths", ascending=False)
+query12.show()
+pd = query12.toPandas()
+pd.to_csv('static/Input/byDateDeaths.csv', index=False)
+
+#Query 9: States with largest increase in testing
+query13 = df.groupBy("state").agg({"totalTestResultsIncrease": "max"}).withColumnRenamed("max(totalTestResultsIncrease)", "maxTestIncrease").orderBy("maxTestIncrease", ascending=False)
+query13.show()
+pd = query13.toPandas()
+pd.to_csv('static/Input/byLargestTestingIncrease.csv', index=False)
+
 # Query 7: By Age
 # query7 = spark.sql("select Data_as_of, Age_group, COVID_Deaths from AgeData")
 # query7.show()

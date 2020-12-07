@@ -123,6 +123,7 @@ def byLargestTestingIncrease():
     data = load_ByLargestTestingIncrease()
     return data.to_json(orient='records')
 
+
 @app.route('/')
 def hello_world():
     return 'Covid Data Analysis!'
